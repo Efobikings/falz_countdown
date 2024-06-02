@@ -1,0 +1,195 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    color: rgba(255, 215, 0, 1);
+}
+
+
+
+
+.animated-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    
+    /* background-color: rgba(255, 215, 0, 1); */
+    
+    
+    position: relative;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.animated-background h1 {
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+
+@keyframes moveDots {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100vw, 100vh);
+        opacity: 0;
+    }
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    /* background-color: white; */
+    background-color: rgba(255, 215, 0, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveDots 5s linear infinite;
+    opacity: 0;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.dot:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.dot:nth-child(5) {
+    animation-delay: 4s;
+}
+
+
+for the countdown
+
+.countdown-innerText {
+    text-align: center;
+}
+.inner_div{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    
+}
+
+#countdown {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 2rem;
+}
+.countdown-container,.inner_div{
+    
+    position: relative;
+    z-index: 1000;
+}
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 20%;
+   
+    
+}
+
+.countdown-item span:first-child {
+    font-size: 4rem;
+}
+
+
+
+@media (max-width: 600px) {
+    body, html {
+        font-size: 14px; /* Adjust the base font size for smaller screens */
+    }
+
+    .countdown-container {
+        padding: 10px; /* Add padding to ensure content doesn't touch the edges */
+        text-align: center;
+    }
+
+    #countdown {
+        flex-direction: column; /* Stack countdown items vertically on small screens */
+        gap: 10px; /* Adjust the gap between items */
+    }
+
+    .countdown-item {
+        font-size: 1.5rem; /* Reduce the font size for smaller screens */
+    }
+
+    .countdown-item span:first-child {
+        font-size: 2rem; /* Reduce the size of the numbers */
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+}
+
+
+img{
+    height: 20vh ;
+    width:  20vh ;
+    display: grid;
+    border-radius: 20vh;
+}
+
+toogle button
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+}
+
+.toggle-button {
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-button::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.toggle-button.active {
+    background-color: #4a4a4a;
+}
+
+.toggle-button.active::before {
+    transform: translateX(30px);
+    background-color: #fff;
+}
+    

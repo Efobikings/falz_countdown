@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falz countdown</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div style="display:flex; justify-content: flex-end; align-items: end; height: 10vh; padding-right: 2%; background-color: black;">
+        <div class="toggle-button" id="toggleButton"> </div>
+    </div>
+    
+    <div class="animated-background">
+        
+
+        <div class="inner_div" style="border:2px solid white; width: 80%; border-radius: 10%; background-color: white;">
+            <div style="display: flex; justify-content: center;">
+                <img src="image/falz.JPG" alt="falz count down" srcset="">
+            </div>
+            <br>
+            
+
+            
+                <div class="countdown-container">
+                    <h1 style="text-align: center; font-family: ''CloisterBlack BT', sans-serif;', sans-serif; color:rgba(255, 215, 0, 1); "class="countdown-innerText"> Before the feast</h1>
+                    <div id="countdown" style="position:relative">
+                        <div class="countdown-item">
+                            <span id="days"></span>
+                            <span>Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours"></span>
+                            <span>Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes"></span>
+                            <span>Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds"></span>
+                            <span>Seconds</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
